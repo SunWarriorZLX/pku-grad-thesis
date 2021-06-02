@@ -79,52 +79,52 @@
 }
 
 \begin{document}
-	% 以下为正文之前的部分，默认不进行章节编号。
-	\frontmatter
-	% 此后到下一 \pagestyle 命令之前不排版页眉或页脚。
-	\pagestyle{empty}
-	% 自动生成封面。
-	\ifblind\makeblind\else\maketitle\fi
+% 以下为正文之前的部分，默认不进行章节编号。
+\frontmatter
+% 此后到下一 \pagestyle 命令之前不排版页眉或页脚。
+\pagestyle{empty}
+% 自动生成封面。
+\ifblind\makeblind\else\maketitle\fi
 
-	% 论文导师评阅表
-	\include{chap/sheet}
+% 论文导师评阅表
+% \include{chap/sheet}
 
-	% 版权声明。封面要求单面打印，故须新开右页。
-	\cleardoublepage
-	\include{chap/copy}
+% 版权声明。封面要求单面打印，故须新开右页。
+\cleardoublepage
+\include{chap/copy}
 
-	% 此后到下一 \pagestyle 命令之前正常排版页眉和页脚。
-	\cleardoublepage
-	\pagestyle{plain}
-	% 重置页码计数器，用大写罗马数字排版此部分页码。
-	\setcounter{page}{0}
-	\pagenumbering{Roman}
-	% 中西文摘要。
-	\include{chap/abs}
-	% 自动生成目录。
-	\tableofcontents
+% 此后到下一 \pagestyle 命令之前正常排版页眉和页脚。
+\cleardoublepage
+\pagestyle{plain}
+% 重置页码计数器，用大写罗马数字排版此部分页码。
+\setcounter{page}{0}
+\pagenumbering{Roman}
+% 中西文摘要。
+% \include{chap/abs}
+% 自动生成目录。
+\tableofcontents
 
-	% 以下为正文部分，默认要进行章节编号。
-	\mainmatter
-	% 各章节。
-	\include{chap/chap1}
-	\include{chap/chap2}
-	\include{chap/chap3}
+% 以下为正文部分，默认要进行章节编号。
+\mainmatter
+% 各章节。
+\include{chap/chap1}
+\include{chap/chap2}
+\include{chap/chap3}
 
-	% 正文中的附录部分。
-	\appendix
-	% 排版参考文献列表。bibintoc 选项使“参考文献”出现在目录中；
-	% 如果同时要使参考文献列表参与章节编号，可将“bibintoc”改为“bibnumbered”。
-	\printbibliography[heading = bibintoc]
-	% 各附录。
-	\include{chap/encl1}
+% 正文中的附录部分。
+\appendix
+% 排版参考文献列表。bibintoc 选项使“参考文献”出现在目录中；
+% 如果同时要使参考文献列表参与章节编号，可将“bibintoc”改为“bibnumbered”。
+\printbibliography[heading = bibintoc]
+% 各附录。
+\include{chap/encl1}
 
-	% 以下为正文之后的部分，默认不进行章节编号。
-	\backmatter
-	% 致谢。
-	\ifblind\else\include{chap/ack}\fi
-	% 原创性声明和使用授权说明。
-	\include{chap/origin}
+% 以下为正文之后的部分，默认不进行章节编号。
+\backmatter
+% 致谢。
+% \ifblind\else\include{chap/ack}\fi
+% % 原创性声明和使用授权说明。
+% \include{chap/origin}
 \end{document}
 
 % vim:ts=4:sw=4
